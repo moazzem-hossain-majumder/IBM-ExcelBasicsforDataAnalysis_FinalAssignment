@@ -1,88 +1,270 @@
-IBM Excel Basics for Data Analysis - Final Assignment
-This repository contains the completed project files, datasets, and documentation for the Final Assignment of the Excel Basics for Data Analysis course (part of the IBM Data Analyst Professional Certificate).
+# IBM Excel Basics for Data Analysis – Final Assignment
 
-📁 Repository Structure
-Plaintext
-├── Montgomery_Fleet_Equipment_Inventory_FA_PART_1_START.csv   # Initial raw dataset
-├── Montgomery_Fleet_Equipment_Inventory_FA_PART_1_END.xlsx     # Cleaned dataset (Part 1 final output)
-├── Montgomery_Fleet_Equipment_Inventory_FA_PART_2_END.xlsx     # Analyzed workbook with Pivot Tables (Part 2 final output)
-└── README.md                                                  # Project documentation
-📑 Project Workflow & Deliverables
-Part 1: Data Cleaning & Preprocessing
-The raw dataset (Montgomery_Fleet_Equipment_Inventory_FA_PART_1_START.csv) contained inconsistent entries, empty rows, duplicate records, and formatting issues. The following cleaning procedures were performed:
+This repository contains the completed project files, datasets, and documentation for the **Final Assignment** of the **IBM Excel Basics for Data Analysis** course, which is part of the **IBM Data Analyst Professional Certificate**.
 
-Workbook Conversion: Imported the raw CSV file into Excel and converted it to native .xlsx workbook format.
+The project focuses on **data cleaning, preprocessing, Excel table formatting, summary statistics, and Pivot Table analysis** using a Montgomery County fleet equipment inventory dataset.
 
-Column Width Adjustment: Auto-fitted all column widths so that header and cell values are completely legible.
+---
 
-Blank Row Removal: Filtered for and eliminated empty rows from the dataset.
+## 📁 Repository Structure
 
-Duplicate Record Removal: Identified and deduplicated redundant records across all columns.
+```text
+├── Montgomery_Fleet_Equipment_Inventory_FA_PART_1_START.csv
+│   └── Initial raw dataset
+│
+├── Montgomery_Fleet_Equipment_Inventory_FA_PART_1_END.xlsx
+│   └── Cleaned dataset – Part 1 final output
+│
+├── Montgomery_Fleet_Equipment_Inventory_FA_PART_2_END.xlsx
+│   └── Analyzed workbook containing Pivot Tables – Part 2 final output
+│
+└── README.md
+    └── Project documentation
+```
 
-Spelling Correction: Corrected typographical errors in departmental fields:
+---
 
-Enviromnental → Environmental
+# 📑 Project Workflow & Deliverables
 
-Rehabilltation → Rehabilitation
+## Part 1: Data Cleaning & Preprocessing
 
-Recsue → Rescue
+The original dataset contained **inconsistent entries, blank rows, duplicate records, spelling errors, formatting issues, and split department-name fields**.
 
-Servcies → Services
+The following data-cleaning procedures were performed.
 
-Whitespace Normalization: Removed double/extra whitespace characters across textual fields.
+### 1. Workbook Conversion
 
-Column Unification: Merged split department name columns into a standardized single column using Flash Fill, subsequently removing redundant columns.
+The raw CSV dataset was imported into Excel and converted into a native `.xlsx` workbook.
 
-Final Export: Saved the clean output as Montgomery_Fleet_Equipment_Inventory_FA_PART_1_END.xlsx.
+**Input:**
 
-Part 2: Data Analysis & Pivot Tables
-Using the cleaned dataset in Montgomery_Fleet_Equipment_Inventory_FA_PART_2_END.xlsx, data analysis tasks were carried out to organize and summarize fleet counts:
+```text
+Montgomery_Fleet_Equipment_Inventory_FA_PART_1_START.csv
+```
 
-Table Formatting: Converted the data range (A1:C50) into a structured Excel Table with banded rows.
+**Output:**
 
-Summary Statistics (AutoSum): Computed core statistical measures for the Equipment Count column:
+```text
+Montgomery_Fleet_Equipment_Inventory_FA_PART_1_END.xlsx
+```
 
-SUM: 1582
+### 2. Column Width Adjustment
 
-AVERAGE: 32.29 (approx. 32.2857)
+Column widths were automatically adjusted so that headers and cell values were fully visible and readable.
 
-MIN: 1
+### 3. Blank Row Removal
 
-MAX: 379
+The dataset was filtered to identify and remove empty rows that did not contain meaningful records.
 
-COUNT: 49
+### 4. Duplicate Record Removal
 
-Pivot Table 1 (Pivot Table 1):
+Duplicate records were identified and removed to ensure that each fleet equipment record appeared only once.
 
-Rows: Department
+### 5. Spelling Correction
 
-Values: Sum of Equipment Count
+Typographical errors in departmental names were identified and corrected.
 
-Ordering: Sorted in descending order by equipment count (top department: Transportation at 1,221).
+| Incorrect | Correct |
+|---|---|
+| `Enviromnental` | `Environmental` |
+| `Rehabilltation` | `Rehabilitation` |
+| `Recsue` | `Rescue` |
+| `Servcies` | `Services` |
 
-Pivot Table 2 (Pivot Table 2):
+### 6. Whitespace Normalization
 
-Rows: Department (primary) and Equipment Class (secondary)
+Extra and duplicate whitespace characters were removed from textual fields to improve consistency.
 
-Values: Sum of Equipment Count
+### 7. Column Unification
 
-Hierarchy: Collapsed all department categories except the top department (Transportation), which is fully expanded.
+Split department-name columns were combined into a single standardized department column using **Flash Fill**.
 
-Pivot Table 3 (Pivot Table 3):
+Redundant columns were subsequently removed.
 
-Rows: Equipment Class (primary) and Department (secondary)
+### 8. Final Export
 
-Values: Sum of Equipment Count
+The cleaned dataset was saved as:
 
-Hierarchy: Collapsed all equipment classes except the first vehicle class (CUV), displaying its department-level distribution.
+```text
+Montgomery_Fleet_Equipment_Inventory_FA_PART_1_END.xlsx
+```
 
-Sheet Ordering: Worksheets are organized in sequence:
-Montgomery_Fleet_Equipment_Inve → Pivot Table 1 → Pivot Table 2 → Pivot Table 3.
+---
 
-🛠️ Software & Tools Used
-Excel for the Web / Microsoft Excel: Data cleaning, text operations, table structuring, and pivot table analysis.
+# 📊 Part 2: Data Analysis & Pivot Tables
 
-Python (pandas, openpyxl): Data processing, automated validation, and workbook generation.
+The cleaned dataset was further analyzed to organize and summarize the fleet equipment inventory.
 
-👤 Author
-MD. MOAZZEM HOSSAIN MAJUMDER
+The final workbook is:
+
+```text
+Montgomery_Fleet_Equipment_Inventory_FA_PART_2_END.xlsx
+```
+
+## 1. Table Formatting
+
+The dataset range:
+
+```text
+A1:C50
+```
+
+was converted into a structured Excel Table with **banded rows** for improved readability and organization.
+
+---
+
+## 2. Summary Statistics
+
+Using Excel's **AutoSum** functionality, the following statistics were calculated for the **Equipment Count** column:
+
+| Statistic | Result |
+|---|---:|
+| **SUM** | 1,582 |
+| **AVERAGE** | 32.29 |
+| **MIN** | 1 |
+| **MAX** | 379 |
+| **COUNT** | 49 |
+
+> The exact average is approximately **32.2857**, which is displayed as **32.29** when rounded to two decimal places.
+
+---
+
+# 📌 Pivot Table Analysis
+
+Three Pivot Tables were created to analyze the distribution of fleet equipment across departments and equipment classes.
+
+## Pivot Table 1
+
+**Purpose:** Summarize the total equipment count by department.
+
+**Configuration:**
+
+- **Rows:** Department
+- **Values:** Sum of Equipment Count
+- **Sorting:** Descending order by equipment count
+
+The department with the highest equipment count was:
+
+> **Transportation — 1,221 equipment units**
+
+---
+
+## Pivot Table 2
+
+**Purpose:** Analyze equipment counts by department and equipment class.
+
+**Configuration:**
+
+- **Rows:** Department
+- **Rows:** Equipment Class
+- **Values:** Sum of Equipment Count
+
+### Hierarchy
+
+All department categories were collapsed except the department with the highest equipment count:
+
+**Transportation**
+
+The Transportation department was fully expanded to display its equipment-class distribution.
+
+---
+
+## Pivot Table 3
+
+**Purpose:** Analyze equipment classes and their distribution across departments.
+
+**Configuration:**
+
+- **Rows:** Equipment Class
+- **Rows:** Department
+- **Values:** Sum of Equipment Count
+
+### Hierarchy
+
+All equipment classes were collapsed except the first vehicle class:
+
+**CUV**
+
+The CUV category was expanded to display its department-level distribution.
+
+---
+
+# 📑 Worksheet Organization
+
+The final workbook organizes the worksheets in the following sequence:
+
+```text
+1. Montgomery_Fleet_Equipment_Inve
+2. Pivot Table 1
+3. Pivot Table 2
+4. Pivot Table 3
+```
+
+This structure makes it easy to move from the cleaned source data to progressively detailed Pivot Table analysis.
+
+---
+
+# 🛠️ Software & Tools Used
+
+### Microsoft Excel / Excel for the Web
+
+Used for:
+
+- Data cleaning
+- Text manipulation
+- Removing duplicates
+- Removing blank rows
+- Flash Fill
+- Table formatting
+- Summary statistics
+- Pivot Table creation
+- Data organization and analysis
+
+### Python
+
+The project workflow also used Python for data processing and validation.
+
+Libraries used:
+
+- **pandas** — Data manipulation and processing
+- **openpyxl** — Excel workbook processing and generation
+
+---
+
+# 🎯 Key Skills Demonstrated
+
+This project demonstrates practical skills in:
+
+- Excel data cleaning
+- Data preprocessing
+- Data quality improvement
+- Duplicate detection and removal
+- Text and whitespace normalization
+- Excel Flash Fill
+- Structured Excel Tables
+- Descriptive statistics
+- Pivot Table creation
+- Hierarchical data analysis
+- Data summarization
+- Spreadsheet organization
+- Python-assisted data validation
+
+---
+
+# 📚 Course Information
+
+**Course:** IBM Excel Basics for Data Analysis  
+**Program:** IBM Data Analyst Professional Certificate  
+**Assignment:** Final Assignment
+
+---
+
+# 👤 Author
+
+**MD. MOAZZEM HOSSAIN MAJUMDER**
+
+---
+
+## ⭐ Project Purpose
+
+This project demonstrates the practical application of **Microsoft Excel data-cleaning and analysis techniques** on a real-world fleet inventory dataset. It serves as part of a data analytics portfolio and demonstrates foundational skills required for **Data Analyst** roles.
